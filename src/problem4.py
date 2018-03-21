@@ -138,7 +138,7 @@ def problem4(m):
     # TODO: 7. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    total = 0
+    total = -1
     for k in range(m - 1):
         if m % (k + 1) == 0:
             total = total + 1
