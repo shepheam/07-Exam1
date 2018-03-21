@@ -122,10 +122,13 @@ def problem2(line1, line2, thickness, win):
     line1.attach_to(win)
     line2.attach_to(win)
     win.render()
-    a = rg.Point((line1.end.x - line1.start.y) / 2, (line1.end.y - line1.end.y) / 2)
-    b = rg.Point((line2.end.x - line2.start.y) / 2, (line2.end.y - line2.end.y) / 2)
+    a = line1.get_midpoint()
+    b = line2.get_midpoint()
     rectangle = rg.Rectangle(a, b)
+    rectangle.outline_color = line1.color
+    rectangle.outline_thickness = thickness
     rectangle.attach_to(win)
+    win.render()
 
 
 
