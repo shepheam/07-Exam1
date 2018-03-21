@@ -100,7 +100,7 @@ def problem3(rect, n, window):
     rect.attach_to(window)
     for k in range(n):
         r = (rect.get_upper_right_corner().y - rect.get_lower_right_corner().y) / 2
-        c = rect.get_lower_right_corner().x + r, rect.get_lower_right_corner().y + (r * 2)
+        c = rg.Point(rect.get_lower_right_corner().x - r * k, rect.get_lower_right_corner().y - (r * 1.75) *k)
         circle = rg.Circle(c, r)
         circle.attach_to(window)
     window.render()
